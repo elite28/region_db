@@ -1,0 +1,23 @@
+-- Ê¡ÊÐÇø×Öµä
+create table d_province(
+id				int primary key not null,
+code			varchar(6) not null,
+name			varchar(60) not null
+)
+load data infile 'd:\province.txt' into table d_province lines terminated by '\r\n'
+
+create table d_city(
+id				int primary key not null,
+code			varchar(6) not null,
+name			varchar(60) not null,
+pcode			varchar(6) not null
+)
+load data infile 'd:\city.txt' into table d_city lines terminated by '\r\n'
+
+create table d_district(
+id				int primary key not null,
+code			varchar(6) not null,
+name			varchar(60) not null,
+pcode			varchar(6) not null
+)
+load data infile 'd:\district.txt' into table d_district lines terminated by '\r\n'
